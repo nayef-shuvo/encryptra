@@ -1,3 +1,4 @@
+import 'package:encryptra/views/registration.dart';
 import 'package:flutter/material.dart';
 
 class Layout extends StatelessWidget {
@@ -9,14 +10,9 @@ class Layout extends StatelessWidget {
         builder: (BuildContext context, BoxConstraints constraints) {
       if (Theme.of(context).platform == TargetPlatform.android ||
           Theme.of(context).platform == TargetPlatform.iOS) {
-        return const Scaffold(
-          body: Center(child: Text("This is Android")),
-          backgroundColor: Colors.red,
-        );
+        return const RegistrationPage();
       } else {
-        return const Scaffold(
-          backgroundColor: Colors.blue,
-        );
+        return const RegistrationPage();
       }
     });
   }
